@@ -14,7 +14,7 @@ function foodFact(){
         console.log(data);
 
         const foodList = document.querySelector('ul');
-        foodList.innerHTML = '';
+        foodList.innerHTML = '';    // Add for list to refresh when new item is entered
 
         if (data.length === 0){
             list.innerHTML = `<li>No results were found</li>`
@@ -23,7 +23,7 @@ function foodFact(){
         const nutrition = data[0];
 
         const nutritionFacts = [
-            {label: 'Serving Size', value: nutrition.serving_size_g, unit: 'g'},
+            {label: 'Serving Size', value: nutrition.serving_size_g, unit: 'g'}, // USe label instead of name
             {label: 'Calories', value: nutrition.calories_kcal, unit: 'cal'},
             {label: 'Protein', value: nutrition.protein_g, unit: 'g'},
             {label: 'Carbs', value: nutrition.carbs_g, unit: 'g'},
